@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+    <h1>
+      Book List
+      <a style="float: right" class="btn btn-primary" href="{% url 'catalog:book-create' %}">+ book</a>
+    </h1>
+
+  <form action="" method="get" class="form-inline">
+    {{ search_form|crispy }}
+    <input class="btn btn-secondary" type="submit" value="🔎">
+  </form>
+    {% if book_list %}
+      <table class="table">
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Price</th>
+          <th>Format</th>
+        </tr>
+        {% for book in book_list %}
+          <tr>
+            <td>
+              <a href="{{ book.get_absolute_url }}">{{ book.id }}</a>
+            </td>
+            <td>{{ book.title }}</td>
+            <td>{{ book.price }}</td>
+            <td>{{ book.format }}</td>
+          </tr>
+        {% endfor %}
+      </table>
+    {% else %}
+      <p>There are no literary formats in library</p>
+    {% endif %}
+{% endblock %}
