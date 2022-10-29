@@ -125,10 +125,10 @@ class AuthorListView(LoginRequiredMixin, generic.ListView):
 
 class AuthorDetailView(LoginRequiredMixin, generic.DetailView):
     model = Author
-    # queryset = Author.objects.all().prefetch_related()
+    # queryset = Author.objects.all()
 
 
 class AuthorCreateView(LoginRequiredMixin, generic.CreateView):
     model = Author
-    success_url = reverse_lazy("catalog:author-detail")
+    success_url = reverse_lazy("catalog:author-list")
     form_class = AuthorCreationForm
