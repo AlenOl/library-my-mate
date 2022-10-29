@@ -6,7 +6,7 @@ Django project for managing books and authors in Library
 
 [library_my_mate_deployed_to_Heroku](PASTE_LINK_HERE)
 
-##Installation
+## Installation
 
 Python3 must be already installed
 
