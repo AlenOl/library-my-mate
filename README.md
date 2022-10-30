@@ -4,7 +4,7 @@ Django project for managing books and authors in Library
 
 ## Check it out!
 
-[library_my_mate_deployed_to_Heroku](PASTE_LINK_HERE)
+[library_my_mate_deployed_to_Heroku](https://library-books-project.herokuapp.com/)
 
 ## Installation
 
